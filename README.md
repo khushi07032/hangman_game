@@ -1,5 +1,6 @@
 # hangman_game
 Hangman is a popular word guessing game where player attempys to build a missing word by guessing one letter at a time. after a few guesses the games ends and player loses.
+
 Khushi bansal(231099547) - Manager 
 Palak Grover(2310990592) - Developer
 Mannat virk(2310990566) - Tester

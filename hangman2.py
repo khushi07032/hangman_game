@@ -6,8 +6,10 @@ import random
 window = tk.Tk()
 window.title('Hangman-Game')
 
+# Change the icon image path to the correct one
+window.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
 
-background_image = tk.PhotoImage(file="images/background.png")
+background_image = tk.PhotoImage(file="images/background (2).png")
 
 def display_start_image():
     start_image = tk.PhotoImage(file="images/hang00.png")
@@ -21,18 +23,22 @@ word_list = ['MUMBAI','DELHI','BANGLORE','HYDRABAD','AHMEDABAD','CHENNAI','KOLKA
             'LUCKNOW','KANPUR','NAGPUR','INDORE','THANE','BHOPAL','PATNA','GHAZIABAD','AGRA','FARIDABAD','MEERUT','RAJKOT','VARANASI','SRINAGAR',
             'RAIPUR','KOTA','JHANSI']
 
-photos = [tk.PhotoImage(file="images/hang0.png"), tk.PhotoImage(file="images/hang1.png"), tk.PhotoImage(file="images/hang2.png"),
+photos = [tk.PhotoImage(file="images/hang0.png"), tk.PhotoImage(file="images/hang1.png"), tk.PhotoImage(file="images/hang2 - Copy.png"),
           tk.PhotoImage(file="images/hang3.png"), tk.PhotoImage(file="images/hang4.png"), tk.PhotoImage(file="images/hang5.png"),
           tk.PhotoImage(file="images/hang6.png"), tk.PhotoImage(file="images/hang7.png")]
+
 
 def newGame():
     global the_word_withSpaces
     global numberOfGuesses
+    global score
+    score = 0
     numberOfGuesses = 0
     
     the_word = random.choice(word_list)
     the_word_withSpaces = " ".join(the_word)
     lblWord.set(' '.join("_" * len(the_word)))
+   
 
 def guess(letter):
     global numberOfGuesses
@@ -68,38 +74,20 @@ tk.Label(window, textvariable=lblWord, font=('consolas 24 bold')).grid(row=0, co
 canvas = tk.Canvas(window, width=1000,height=300)
 canvas.grid(row=1, column=0, columnspan=10, padx=10, pady=10)
 
-
-
-# Create a canvas for the round buttons
-button_radius = 20
-button_spacing = 50
-button_start_x = 25
-button_start_y = 25
+button_frame = tk.Frame(window)
+button_frame.grid(row=1, column=0, columnspan=10, padx=10, pady=10)
 
 button_list = []
 
-n = 0
-for c in ascii_uppercase:
-    x = button_start_x + (n % 6) * button_spacing
-    y = button_start_y + (n // 6) * button_spacing
-    button = canvas.create_oval(x - button_radius, y - button_radius, x + button_radius, y + button_radius, fill="aqua", outline="black")
-    canvas.create_text(x, y, text=c, font=("Helvetica", 12))
-    canvas.tag_bind(button, "<Button-1>", lambda event, char=c: guess(char))
+for index, char in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+    row, col = divmod(index, 6)
+    button = tk.Button(button_frame, text=char, font=("Helvetica", 12), width=4, bg="aqua", command=lambda ch=char: guess(ch))
+    button.grid(row=row, column=col, padx=5, pady=5)
     button_list.append(button)
-    n += 1
-
-# Define buttons on the right side of the window
-right_button_frame = tk.Frame(window)
-right_button_frame.grid(row=1, column=9, rowspan=3, padx=10, pady=10)
-
-def create_button(char):
-    return tk.Button( right_button_frame,text=char, command=lambda: guess(char), font=('Helvetica 18'), bg="aqua", width=4)
-
-for char in ascii_uppercase[26:30]:
-    button = create_button(char)
-    button.pack(side=tk.TOP)
-
-tk.Button(window, text="New\nGame", command=newGame,font=("Helvetica 10 bold")).grid(row=3, column=8)
 
 newGame()
+
+new_game_button = tk.Button(window, text="New Game", command=newGame, font=("Helvetica", 12, "bold"))
+new_game_button.grid(row=2, column=0, columnspan=10, pady=10)
+
 window.mainloop()

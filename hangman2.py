@@ -63,6 +63,7 @@ def guess(letter):
             button_index = ascii_uppercase.index(letter)
             canvas.itemconfig(button_list[button_index], fill="red")
 
+
 imgLabel = tk.Label(window, image=background_image)
 imgLabel.place(x=0, y=0, relwidth=1, relheight=1)
 

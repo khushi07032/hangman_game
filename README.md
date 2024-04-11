@@ -1,4 +1,4 @@
-# hangman_game
+# Innovators
 Hangman is a popular word guessing game where player attempys to build a missing word by guessing one letter at a time. after a few guesses the games ends and player loses.
 
 Khushi bansal(231099547) - Manager 

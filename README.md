@@ -7,7 +7,15 @@ Palak Grover(2310990592) - Developer
 
 Mannat virk(2310990566) - Tester
 
-#Features of Hangman game:
+## how to access the game?
+
+1. Clone the repository using git clone command.
+2. Open hangman.py file in Vs Code
+3. CLick on run.
+
+
+## Features of our hangman game:
+
 
 version 1.1: This version includes the background as grid, buttons to be red and green upon being the correct and incorrect answer respectively and the buttons are round in shape. There are total 7 tries to guess the right answer otherwise the man will be hanged up. 
 

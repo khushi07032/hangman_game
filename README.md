@@ -8,10 +8,14 @@ Palak Grover(2310990592) - Developer
 Mannat virk(2310990566) - Tester
 
 ## how to access the game?
-
 1. Clone the repository using git clone command.
 2. Open hangman.py file in Vs Code
 3. CLick on run.
+
+## How to play the game?
+1. Guess the name of the city.
+2. Enter the letters and try to guess the name.
+3. After 7 fail attempts, the game will be over and the man will be hanged. 
 
 
 ## Features of our hangman game:
@@ -23,7 +27,7 @@ version 1.2: In this version, the buttosn are made to be rectange and grid backg
 
 version 1.3:  in this version, The error has been resolved that the buttons are disabling after they are used.
 
-#Problems and solutions of our project:
+## Problems and Solutions of our project:
 
 Version 1.1: The Version 1.1 had been developed. Currently, it displays a background which covers only half of the screen with alphabeths appearing on the far left. Furthermore, the background appearing behind the hangman image is different than the rest. To mark these technical problems, the developer can make certain changes. Instead of using a different background, the developer can use the same background for the whole setup. In addition with using the same background, the developer can use an enlarged image so that the background covers the whole screen. These are the changes that developer can make.
 

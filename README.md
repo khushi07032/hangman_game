@@ -1,4 +1,4 @@
-# hangman_game
+# Innovators
 Hangman is a popular word guessing game where player attempys to build a missing word by guessing one letter at a time. after a few guesses the games ends and player loses.
 
 Khushi bansal(231099547) - Manager 
@@ -7,8 +7,27 @@ Palak Grover(2310990592) - Developer
 
 Mannat virk(2310990566) - Tester
 
-Features of Hangman game:
-version 1.1: this version includes the background as grid, buttons to be red and green upon being the correct and incorrect answer respectively and the buttons are round in shape. There are total 7 tries to guess the right answer otherwise the man will be hanged up. 
+## how to access the game?
+1. Clone the repository using git clone command.
+2. Open hangman.py file in Vs Code
+3. CLick on run.
+
+## How to play the game?
+1. Guess the name of the city.
+2. Enter the letters and try to guess the name.
+3. After 7 fail attempts, the game will be over and the man will be hanged. 
+
+
+## Features of our hangman game:
+
+
+version 1.1: This version includes the background as grid, buttons to be red and green upon being the correct and incorrect answer respectively and the buttons are round in shape. There are total 7 tries to guess the right answer otherwise the man will be hanged up. 
+
+version 1.2: In this version, the buttosn are made to be rectange and grid background has been set on whole window. The icon is added. The game also includes GAMEOVER tab when the game ends.
+
+version 1.3:  in this version, The error has been resolved that the buttons are disabling after they are used.
+
+## Problems and Solutions of our project:
 
 Version 1.1: The Version 1.1 had been developed. Currently, it displays a background which covers only half of the screen with alphabeths appearing on the far left. Furthermore, the background appearing behind the hangman image is different than the rest. To mark these technical problems, the developer can make certain changes. Instead of using a different background, the developer can use the same background for the whole setup. In addition with using the same background, the developer can use an enlarged image so that the background covers the whole screen. These are the changes that developer can make.
 

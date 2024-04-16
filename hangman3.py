@@ -10,7 +10,7 @@ window.title('Hangman-Game')
 window.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
 
 background_image = tk.PhotoImage(file="images/background (2).png")
-
+#final
 def display_start_image():
     start_image = tk.PhotoImage(file="images/hang0.png")
     start_label = tk.Label(window, image=start_image)
@@ -23,9 +23,10 @@ word_list = ['MUMBAI','DELHI','BANGLORE','HYDRABAD','AHMEDABAD','CHENNAI','KOLKA
             'LUCKNOW','KANPUR','NAGPUR','INDORE','THANE','BHOPAL','PATNA','GHAZIABAD','AGRA','FARIDABAD','MEERUT','RAJKOT','VARANASI','SRINAGAR',
             'RAIPUR','KOTA','JHANSI']
 
-photos= [tk.PhotoImage(file="images/hang0.png"), tk.PhotoImage(file="images/hang1.png"), tk.PhotoImage(file="images/hang2.png"),
+photos = [tk.PhotoImage(file="images/hang0.png"), tk.PhotoImage(file="images/hang1.png"), tk.PhotoImage(file="images/hang2.png"),
           tk.PhotoImage(file="images/hang3.png"), tk.PhotoImage(file="images/hang4.png"), tk.PhotoImage(file="images/hang5.png"),
           tk.PhotoImage(file="images/hang6.png"), tk.PhotoImage(file="images/hang7.png")]
+
 
 def newGame():
     global the_word_withSpaces
